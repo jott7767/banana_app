@@ -225,7 +225,7 @@ DEPENDENCIES
   pg
   pry-byebug
   puma (~> 3.11)
-  pundit (~> 1.1)
+  pundit
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
   selenium-webdriver
