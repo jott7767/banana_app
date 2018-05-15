@@ -1,2 +1,22 @@
-<h1>Locations#index</h1>
-<p>Find me in app/views/locations/index.html.erb</p>
+<h1>Locations</h1>
+
+<table>
+  <tr>
+    <th>Merchant</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+  </tr>
+    <% @locations.each do |location| %>
+      <tr>
+         <td><%= location.merchant_id %></td>
+         <td><%= location.name %></td>
+         <td><%= location.address %></td>
+         <td><%= location.city %></td>
+         <td><%= location.state %></td>
+         <td><%= location.zip %></td>
+      </tr>
+    <% end %>
+</table>
