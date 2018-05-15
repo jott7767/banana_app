@@ -1,2 +1,33 @@
-<h1>Locations#edit</h1>
-<p>Find me in app/views/locations/edit.html.erb</p>
+<%= form_with model: @location do |f| %>
+
+  <p>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %>
+    <br>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %>
+    <br>
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state %>
+    <br>
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :zip %>
+    <br>
+    <%= f.text_field :zip %>
+  </p>
+
+  <p>
+    <%= f.submit 'save' %>
+  </p>
+
+<% end %>

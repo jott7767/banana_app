@@ -8,7 +8,16 @@ class LocationPolicy < ApplicationPolicy
     end
 
     def resolve
-      scope.where(merchant_id: @user.merchant_id)
+      return scope.all if user.admin?
+
+      scope.where(merchant_id: user.merchant_id)
     end
+
+  end
+
+  def update?
+    return true if user.admin?
+
+    record.merchant_id == user.merchant_id
   end
 end

@@ -3,20 +3,24 @@
 <table>
   <tr>
     <th>Merchant</th>
+    <th>ID</th>
     <th>Name</th>
     <th>Address</th>
     <th>City</th>
     <th>State</th>
     <th>Zip</th>
+    <th></th>
   </tr>
     <% @locations.each do |location| %>
       <tr>
          <td><%= location.merchant_id %></td>
+         <td><%= location.id %></td>
          <td><%= location.name %></td>
          <td><%= location.address %></td>
          <td><%= location.city %></td>
          <td><%= location.state %></td>
          <td><%= location.zip %></td>
+         <td><%= link_to 'edit', edit_location_path(location) %></td>
       </tr>
     <% end %>
 </table>
